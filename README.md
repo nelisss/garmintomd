@@ -41,8 +41,8 @@ The following options are recognized:
 | Option | Description | Possible values |
 | ------ | ----------- | --------------- |
 | -h --help | Print help. | - |
-| -f --file | Path to Garmin CSV file. Default | Valid path to CSV file or "interactive" to be prompted with file picker. |
+| -f --file | Path to Garmin CSV file. Default: interactive file picker. | Valid path to CSV file or "interactive" to be prompted with file picker. |
 | -d --directory | Output directory to save .md files to. Default: working directory. | Valid path to folder. Can create one folder, but not recursively. |
-| -o --frontmatter | Type of frontmatter to add to .md files. | Currently only supports "joplin" or "none". Default: "none". |
+| -o --frontmatter | Type of frontmatter to add to .md files. Default: "none". | Currently only supports "joplin" or "none". |
 | -z --timezone | Timezone to use for datetime extracted from CSV. Default: system timezone. | Timezone in IANA format (TZ identifier in [this](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List) table). |
 | -t --favorite-tag | Whether to add a tag "Favorite" to the frontmatter of activities with favorite=true. | true/t or false/f |

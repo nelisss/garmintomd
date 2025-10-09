@@ -23,7 +23,16 @@ try:
     arguments, values = getopt.getopt(args, options, long_options)
     for arg, val in arguments:
         if arg in ("-h", "--help"):
-            print("Help")
+            help_string = \
+"""Usage: garmintomd.py [-h] [-f <file>] [-d <output directory>] [-o <frontmatter>] [-z <timezone>] [-t <true/false>]
+Options:
+    -h --help           : Print this help and exit.
+    -f --file           : Path to Garmin CSV file or "interactive". Default: interactive.
+    -d --directory      : Output directory to save .md files to. Default: working directory.
+    -o --frontmatter    : Type of frontmatter to add to .md files. Default: none. Currently only supports "joplin".
+    -z --timzeone       : Timezone to use for datetime extracted from CSV, in IANA format (e.g. "Europe/Amsterdam"). Default: system timezone.
+    -t --favorite-tag   : Whether to add a tag "Favorite" to the frontmatter of activities with favorite=true (true/t or false/f). Default: true."""
+            print(help_string)
             sys.exit()
 
         if arg in ("-f", "--file"):
