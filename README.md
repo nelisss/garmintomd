@@ -1,7 +1,7 @@
 # Garmin to markdown
 
 ### Introduction
-This script allow you to convert a csv file with Garmin activities to markdown files, one for each activity. These markdown files can subsequently be imported into a note taking app, for instance. 
+This script allow you to convert a CSV file with Garmin activities to markdown files, one for each activity. These markdown files can subsequently be imported into a note taking app, for instance. 
 
 ### Requirements
 - Python 3.8 or higher
@@ -20,7 +20,7 @@ chmod +x install.sh
 ```
 
 ### Usage
-**Download Garmin activities csv**
+**Download Garmin activities CSV**
 
 1. Garmin Connect CSV: from https://connect.garmin.com/modern/activities, scroll down as far as you want and press Export CSV.
         
@@ -41,8 +41,8 @@ The following options are recognized:
 | Option | Description | Possible values |
 | ------ | ----------- | --------------- |
 | -h --help | Print help. | - |
-| -f --file | Path to Garmin csv file. Default | Valid path to csv file or "interactive" to be prompted with file picker. |
+| -f --file | Path to Garmin CSV file. Default | Valid path to CSV file or "interactive" to be prompted with file picker. |
 | -d --directory | Output directory to save .md files to. Default: working directory. | Valid path to folder. Can create one folder, but not recursively. |
 | -o --frontmatter | Type of frontmatter to add to .md files. | Currently only supports "joplin" or "none". Default: "none". |
-| -z --timezone | Timezone to use for datetime extracted from csv. Default: system timezone. | Timezone in IANA format (TZ identifier in [this](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List) table). |
+| -z --timezone | Timezone to use for datetime extracted from CSV. Default: system timezone. | Timezone in IANA format (TZ identifier in [this](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List) table). |
 | -t --favorite-tag | Whether to add a tag "Favorite" to the frontmatter of activities with favorite=true. | true/t or false/f |
