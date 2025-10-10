@@ -14,7 +14,7 @@ options = "hf:d:o:z:t:"
 long_options = ["help", "file=", "directory=", "frontmatter=", "timezone=", "favorite-tag="]
 
 garmin_csv_path = "interactive"
-output_dir = os.getcwd()
+output_dir = os.getcwd() + "/output"
 frontmatter = "none"
 timezone = get_localzone_name()
 favorite_tag = True
