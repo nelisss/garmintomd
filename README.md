@@ -14,7 +14,7 @@ This script allows you to convert a CSV file with Garmin activities to markdown 
 
 ```
 cd /path/to/directory
-git clone https://git.nelisss.net/niels/garmintomd.git
+git clone https://github.com/nelisss/garmintomd
 ```
 
 1. Run install.sh to create a virtual environment with the required python packages installed
@@ -51,7 +51,11 @@ The following options are recognized:
 |-------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
 | \-h --help         | Print help.                                                                          | \-                                                                        |
 | \-f --file         | Path to Garmin CSV file. Default: interactive file picker.                           | Valid path to CSV file or "interactive" to be prompted with file picker. |
-| \-d --directory    | Output directory to save .md files to. Default: <working directory>/output.          | Valid path to folder. Can create one folder, but not recursively.        |
+| \-d --directory    | Output directory to save .md files to. Default: \<working directory\>/output.          | Valid path to folder. Can create one folder, but not recursively.        |
 | \-o --frontmatter  | Type of frontmatter to add to .md files. Default: "none".                            | Currently only supports "joplin" or "none".                              |
 | \-z --timezone     | Timezone to use for datetime extracted from CSV. Default: system timezone.           | Timezone in IANA format (TZ identifier in [this](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List) table).                   |
-| \-t --favorite-tag | Whether to add a tag "Favorite" to the frontmatter of activities with favorite=true. | true/t or false/f                                                        |
+| \-t --favorite-tag | Whether to add a tag "Favorite" to the frontmatter of activities with favorite=true. Default: true. | true/t or false/f                                                        |
+
+### Combine with Strength Level
+
+The markdown files resulting from this script can be combined with the output of another script, [strengthleveltomd](https://github.com/nelisss/strengthleveltomd), by using [garminslcombinemd](https://github.com/nelisss/garminslcombinemd).
