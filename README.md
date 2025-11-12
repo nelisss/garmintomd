@@ -39,7 +39,7 @@ chmod +x install.sh
 source venv/bin/activate
 ```
 
-1. Run the python script
+2. Run the python script
 
 ```
 python garmintomd.py [options]
